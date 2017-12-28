@@ -33,9 +33,10 @@ preferences {
     input "hostHub", "hub", title: "Select Hub", multiple: false, required: true
   }
   section("Yamaha Receiver") {
-    input name: "receiverName", type: "text", title: "Name", required: true, defaultValue: "Yamaha"
-    input name: "receiverIp", type: "text", title: "IP", required: true
-    input name: "receiverZones", type: "enum", title: "Zones", required: true, multiple: true, options: ["Main_Zone","Zone_B","Zone_2","Zone_3","Zone_4"]
+    input name: "Yamaha RXV475", type: "text", title: "Name", required: true, defaultValue: "Yamaha"
+    input name: "192.168.1.13", type: "text", title: "IP", required: true
+    //input name: "receiverZones", type: "enum", title: "Zones", required: true, multiple: true, options: ["Main_Zone","Zone_B","Zone_2","Zone_3","Zone_4"]
+    input name: "receiverZones", type: "enum", title: "Zones", required: true, multiple: true, options: ["Main_Zone"]
   }
 }
 
