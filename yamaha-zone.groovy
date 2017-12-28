@@ -77,8 +77,8 @@ metadata {
 
     // row
     standardTile("0", "device.source0", decoration: "flat", width: 2, height: 2) {
-      state("off", label:"AV1", action:"source0", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
-      state("on", label:"AV1", action:"source0", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
+      state("off", label:"HDMI 1", action:"source0", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
+      state("on", label:"HDMI 1", action:"source0", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-green.png", backgroundColor:"#ffffff")
     }
     standardTile("1", "device.source1", decoration: "flat", width: 2, height: 2) {
       state("off", label:"AV2", action:"source1", icon:"https://raw.githubusercontent.com/redloro/smartthings/master/images/indicator-dot-gray.png", backgroundColor:"#ffffff")
@@ -127,7 +127,7 @@ metadata {
   }
 
   preferences {
-    input name: "source0", type: "text", title: "Source 1", defaultValue: "AV1"
+    input name: "source0", type: "text", title: "Source 1", defaultValue: "HDMI 1"
     input name: "source1", type: "text", title: "Source 2", defaultValue: "AV2"
     input name: "source2", type: "text", title: "Source 3", defaultValue: "AV3"
     input name: "source3", type: "text", title: "Source 4", defaultValue: "AV4"
@@ -220,7 +220,7 @@ def getSourceName(id) {
   if (settings) {
     return settings."source${id}"
   } else {
-    return ['AV1', 'AV2', 'AV3', 'AV4', 'AV5', 'AV6'].get(id)
+    return ['HDMI 1', 'AV2', 'AV3', 'AV4', 'AV5', 'AV6'].get(id)
   }
 }
 
